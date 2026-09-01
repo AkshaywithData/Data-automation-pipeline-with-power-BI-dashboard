@@ -45,11 +45,12 @@ The project is designed to demonstrate practical skills in:
                          MySQL
                             │
                     ┌───────┴───────┐
-                    ▼               ▼
-                PK / FK         Analysis CSVs
-                Relationships       │
+                    │
+                    │               ▼
+                    ▼            PK / FK         
+               SQL Analysis     Relationships       
                     │               │
-              SQL Analysis          │
+                Analysis csvs       │
                                     ▼
                                 Power BI
                                     │
