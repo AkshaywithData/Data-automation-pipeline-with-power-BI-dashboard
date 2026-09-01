@@ -90,7 +90,7 @@ Chemical Production Data Automation
 │   └── pipeline.log
 │
 ├── Images/
-│   └── Dashboard.log
+│   └── Dashboard.png
 │
 ├── License
 ├── pipeline.py
@@ -140,7 +140,7 @@ The following tables are loaded:
 
 
 ## Database Relationships
-
+```
 fact_production
       │
       ├── DateID ───────► dim_date
@@ -154,6 +154,7 @@ fact_production
       ├── OperatorID ───► dim_operator
       │
       └── ProductID ────► dim_product
+```
 
 This creates a basic star-schema structure for analytical reporting.
 

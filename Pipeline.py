@@ -194,16 +194,16 @@ def create_database():
     DB_NAME = os.getenv("DB_NAME")
 
     engine = create_engine(
-    f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+    f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}"
     )
 
     with engine.connect() as conn:
         conn.execute(text("CREATE DATABASE IF NOT EXISTS chemical_production"))
 
 
-    engine = create_engine(
-        "mysql+pymysql://root:akshayak47@localhost:3306/chemical_production"
-    )
+    engine = create_engine((
+        f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+        ))
     with engine.connect() as conn:
         conn.execute(text("DROP TABLE IF EXISTS fact_production"))
         conn.execute(text("DROP TABLE IF EXISTS dim_date"))
