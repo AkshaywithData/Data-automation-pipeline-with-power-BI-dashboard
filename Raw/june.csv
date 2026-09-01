@@ -1,0 +1,19 @@
+ProductionID,ProductionDate,Plant,Machine,Shift,Operator,Product,ProductCategory,ProductionQty,GoodQty,RejectedQty,DowntimeHours,EnergyKwh
+1001,01-06-2026,Plant A,Reactor-01,A,Operator-01,Methanol,Solvent,520,505,15,1.2,4100
+1002,01-06-2026,Plant A,Reactor-02,B,Operator-02,Acetic Acid,Acid,480,468,12,0.8,3850
+1003,01-06-2026,Plant A,Reactor-03,C,Operator-03,Formaldehyde,Intermediate,450,439,11,1.5,3600
+1004,03-06-2026,Plant B,Reactor-01,A,Operator-04,Methanol,Solvent,550,535,15,0.6,4250
+1005,04-06-2026,Plant B,Reactor-02,B,Operator-05,Sodium Hydroxide,Base,610,594,16,1.1,4700
+1006,05-06-2026,Plant A,Reactor-03,C,Operator-06,Acetic Acid,Acid,495,480,15,1.8,3950
+1007,07-06-2026,Plant A,Reactor-01,A,Operator-01,Formaldehyde,Intermediate,460,452,8,0.5,3500
+1008,08-06-2026,Plant B,Reactor-02,B,Operator-02,Methanol,Solvent,530,516,14,1,4150
+1009,10-06-2026,Plant B,Reactor-03,C,Operator-03,Sodium Hydroxide,Base,625,610,15,0.7,4800
+1010,12-06-2026,Plant A,Reactor-02,A,Operator-04,Acetic Acid,Acid,510,497,13,1.3,4020
+1011,14-06-2026,Plant A,Reactor-03,B,Operator-05,Methanol,Solvent,545,530,15,1.6,4200
+1012,16-06-2026,Plant B,Reactor-01,C,Operator-06,Formaldehyde,Intermediate,470,462,8,0.4,3550
+1013,18-06-2026,Plant B,Reactor-02,A,Operator-01,Sodium Hydroxide,Base,640,621,19,1.4,4900
+1014,20-06-2026,Plant A,Reactor-01,B,Operator-02,Methanol,Solvent,515,503,12,0.9,4050
+1015,22-06-2026,Plant A,Reactor-02,C,Operator-03,Acetic Acid,Acid,500,486,14,1.7,3980
+1016,25-06-2026,Plant B,Reactor-03,A,Operator-04,Formaldehyde,Intermediate,475,466,9,0.8,3620
+1017,27-06-2026,Plant B,Reactor-01,B,Operator-05,Methanol,Solvent,560,546,14,1.1,4300
+1018,29-06-2026,Plant A,Reactor-02,C,Operator-06,Sodium Hydroxide,Base,630,612,18,1.9,4850

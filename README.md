@@ -1,0 +1,284 @@
+# Chemical Production Data Automation & Power BI Dashboard
+
+##  Project Overview
+
+This project demonstrates an end-to-end data automation pipeline for chemical production data.
+
+The pipeline takes raw CSV production files, cleans and transforms the data using Python, creates fact and dimension tables, loads the data into MySQL with primary and foreign key relationships, performs SQL analysis, and presents the results through an interactive Power BI dashboard using DAX measures.
+
+The project is designed to demonstrate practical skills in:
+
+- Python
+- Pandas
+- Data Cleaning
+- Data Transformation
+- Dimensional Data Modelling
+- MySQL
+- SQL
+- Primary & Foreign Keys
+- SQLAlchemy
+- Power BI
+- DAX
+- Data Visualization
+- ETL Automation
+- Logging
+
+## End to End data pipeline
+```text
+                         RAW DATA
+                            │
+                            ▼
+                    CSV Production Files
+                            │
+                            ▼
+                    Python ETL Pipeline
+                            │
+             ┌──────────────┼──────────────┐
+             ▼              ▼              ▼
+          Cleaning      Validation    Transformation
+             │              │              │
+             └──────────────┼──────────────┘
+                            ▼
+                  Fact & Dimension Tables
+                            │
+                            ▼
+                         MySQL
+                            │
+                    ┌───────┴───────┐
+                    ▼               ▼
+                PK / FK         SQL Analysis
+               Relationships        │
+                    │               ▼
+                    └────────► Analysis CSVs
+                                    │
+                                    ▼
+                                Power BI
+                                    │
+                                    ▼
+                              DAX Measures
+                                    │
+                                    ▼
+                            Interactive Dashboard
+```
+
+##  Project Architecture
+text
+```
+Chemical Production Data Automation
+│
+├── Raw/
+│   ├── production_june.csv
+│   ├── production_july.csv
+│   └── production_august.csv
+│
+├── output/
+│   ├── dim_plant.csv
+│   ├── dim_machine.csv
+│   ├── dim_shift.csv
+│   ├── dim_operator.csv
+│   ├── dim_product.csv
+│   └── dim_date.csv
+│
+├── Analysis/
+│   ├── plant_production.csv
+│   ├── good_vs_rejected_prod.csv
+│   ├── machine_prod.csv
+│   ├── production_by_product.csv
+│   └── operator_production.csv
+│
+├── logs/
+│   └── pipeline.log
+│
+├── Images/
+│   └── Dashboard.log
+│
+├── License
+├── pipeline.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+
+## Dataset
+
+The project uses chemical production data containing information such as:
+
+- Production ID
+- Production Date
+- Plant
+- Machine
+- Shift
+- Operator
+- Product
+- Product Category
+- Production Quantity
+- Good Quantity
+- Rejected Quantity
+- Downtime Hours
+- Energy Consumption
+
+Multiple CSV files can be placed inside the Raw/ folder.
+
+The Python pipeline automatically reads all CSV files from this folder.
+
+## MySQL Database
+
+The pipeline automatically creates the:
+
+chemical_production database.
+
+The following tables are loaded:
+
+- dim_date
+- dim_plant
+- dim_machine
+- dim_shift
+- dim_operator
+- dim_product
+- fact_production
+
+
+## Database Relationships
+
+fact_production
+      │
+      ├── DateID ───────► dim_date
+      │
+      ├── PlantID ──────► dim_plant
+      │
+      ├── MachineID ────► dim_machine
+      │
+      ├── ShiftID ──────► dim_shift
+      │
+      ├── OperatorID ───► dim_operator
+      │
+      └── ProductID ────► dim_product
+
+This creates a basic star-schema structure for analytical reporting.
+
+## SQL Analysis
+
+Analysis 1 — Production by Plant
+
+Analysis 2 — Good vs Rejected Production
+
+Analysis 3 — Production by Machine
+
+Analysis 4 — Production by Product  
+
+Analysis 5 — Production by Operator
+
+
+## Power BI Dashboard
+
+KPI Cards
+
+- Total Production
+- Total Good Production
+- Total Rejected Quantity
+- Rejection Rate %
+- Total Downtime
+
+Slicers
+
+- Plant
+- Product
+- Production Date
+
+Visualizations
+- Production Trend by Day
+- Production by Plant
+- Good vs Rejected Production by Plant
+
+DAX Measures
+- Total Production
+- Total Good Production
+- Total Rejected Quantity
+- Rejection Rate %
+- Average Downtime
+
+## Logging
+
+The pipeline uses Python's built-in logging module.
+
+Logs are stored in:
+
+logs/pipeline.log
+
+
+## Technologies Used
+
+
+ Technology  Purpose                              
+ 
+ Python      ETL automation                        
+ Pandas      Data cleaning and transformation     
+ SQLAlchemy  Python–MySQL connection              
+ PyMySQL     MySQL database driver                 
+ MySQL       Data storage and relational modelling 
+ SQL         Data analysis                         
+ Power BI    Dashboard and visualization           
+ DAX         Dynamic KPI calculations              
+ Logging     Pipeline monitoring                   
+
+
+## Outcomes
+
+This project demonstrates the ability to:
+
+- Build a Python ETL pipeline
+- Process multiple CSV files automatically
+- Clean and transform raw production data
+- Create dimensional models
+- Build fact and dimension tables
+- Load data into MySQL
+- Create primary and foreign key relationships
+- Perform SQL-based analysis
+- Build DAX measures
+- Create interactive Power BI dashboards
+- Implement pipeline logging
+- Structure Python code using reusable functions
+
+## Future Improvements
+
+Possible future enhancements include:
+
+- Error notification
+- Windows Task Scheduler automation 
+- Power BI Service scheduled refresh
+- Incremental data loading
+
+
+##  Project Objective
+```
+The main objective of this project is to demonstrate an end-to-end data engineering and automation workflow:
+
+Raw Data
+   ↓
+Python ETL
+   ↓
+Data Cleaning
+   ↓
+Data Transformation
+   ↓
+Dimensional Modelling
+   ↓
+MySQL
+   ↓
+PK / FK Relationships
+   ↓
+SQL Analysis
+   ↓
+Power BI
+   ↓
+DAX
+   ↓
+Interactive Dashboard
+```
+
+## Author
+
+**Akshay Gawand**
+
+
