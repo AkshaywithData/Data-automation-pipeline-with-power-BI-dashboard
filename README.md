@@ -46,11 +46,10 @@ The project is designed to demonstrate practical skills in:
                             │
                     ┌───────┴───────┐
                     ▼               ▼
-                PK / FK         SQL Analysis
-               Relationships        │
-                    │               ▼
-                    └────────► Analysis CSVs
-                                    │
+                PK / FK         Analysis CSVs
+                Relationships       │
+                    │               │
+              SQL Analysis          │
                                     ▼
                                 Power BI
                                     │
@@ -59,6 +58,9 @@ The project is designed to demonstrate practical skills in:
                                     │
                                     ▼
                             Interactive Dashboard
+               Relationships      
+                    │             
+              SQL Analysis     
 ```
 
 ##  Project Architecture
