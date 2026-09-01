@@ -58,9 +58,7 @@ The project is designed to demonstrate practical skills in:
                                     │
                                     ▼
                             Interactive Dashboard
-               Relationships      
-                    │             
-              SQL Analysis     
+             
 ```
 
 ##  Project Architecture
