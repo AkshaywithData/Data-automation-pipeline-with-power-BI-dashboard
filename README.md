@@ -198,7 +198,7 @@ DAX Measures
 - Total Good Production
 - Total Rejected Quantity
 - Rejection Rate %
-- Average Downtime
+- Total Downtime
 
 ## Logging
 
