@@ -92,7 +92,7 @@ Chemical Production Data Automation
 ├── Images/
 │   └── Dashboard.png
 │
-├── License
+├── LICENSE
 ├── Pipeline.py
 ├── README.md
 ├── requirements.txt
