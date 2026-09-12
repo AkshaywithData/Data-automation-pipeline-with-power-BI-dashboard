@@ -62,7 +62,7 @@ The project is designed to demonstrate practical skills in:
 
 ## How to Run
 
-1. 
+1. install requirements txt.
  ```bash
          pip install -r requirements.txt
    ```
