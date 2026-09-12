@@ -266,18 +266,19 @@ logs/pipeline.log
 
 ## Technologies Used
 
+## Technologies Used
 
- Technology      Purpose                              
- 
- Python         ETL automation                        
- Pandas         Data cleaning and transformation     
- SQLAlchemy     Python–MySQL connection              
- PyMySQL        MySQL database driver                 
- MySQL          Data storage and relational modelling 
- SQL            Data analysis                         
- Power BI       Dashboard and visualization           
- DAX            Dynamic KPI calculations              
- Logging        Pipeline monitoring                   
+| Technology | Purpose |
+|------------|---------|
+| Python | ETL automation |
+| Pandas | Data cleaning and transformation |
+| SQLAlchemy | Python–MySQL connection |
+| PyMySQL | MySQL database driver |
+| MySQL | Data storage and relational modelling |
+| SQL | Data analysis |
+| Power BI | Dashboard and visualization |
+| DAX | Dynamic KPI calculations |
+| Logging | Pipeline monitoring |               
 
 
 ## Outcomes
