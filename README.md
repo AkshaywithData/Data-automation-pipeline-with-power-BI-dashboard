@@ -63,9 +63,9 @@ The project is designed to demonstrate practical skills in:
 ## How to Run
 
 1. 
-```bash
-      pip install -r requirements.txt
-```
+ ```bash
+         pip install -r requirements.txt
+   ```
 
 2.   Create a '.env' file in the project root:
 
@@ -74,7 +74,7 @@ The project is designed to demonstrate practical skills in:
    - DB_HOST=localhost
    - DB_NAME=chemical_production
 
-   The pipeline uses environment variables for the database connection. Your code loads these values using load_dotenv().
+      The pipeline uses environment variables for the database connection. Your code loads these values using load_dotenv().
 
 
 3.  Place your production CSV files inside:
