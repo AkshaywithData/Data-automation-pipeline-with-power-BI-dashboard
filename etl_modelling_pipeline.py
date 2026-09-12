@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
                            
 def load_data():
 
-
     logger.info("Pipeline started")
     dfs = []
 

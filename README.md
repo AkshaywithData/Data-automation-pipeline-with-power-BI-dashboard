@@ -2,7 +2,7 @@
 
 ##  Project Overview
 
-This project demonstrates an end-to-end data automation pipeline for chemical production data.
+This project demonstrates an end-to-end data engineering and automation pipeline for chemical production data.
 
 The pipeline takes raw CSV production files, cleans and transforms the data using Python, creates fact and dimension tables, loads the data into MySQL with primary and foreign key relationships, performs SQL analysis, and presents the results through an interactive Power BI dashboard using DAX measures.
 
@@ -24,7 +24,7 @@ The project is designed to demonstrate practical skills in:
 - Logging
 
 ## End to End data pipeline
-```text
+```
                          RAW DATA
                             │
                             ▼
@@ -33,11 +33,12 @@ The project is designed to demonstrate practical skills in:
                             ▼
                     Python ETL Pipeline
                             │
-             ┌──────────────┼──────────────┐
-             ▼              ▼              ▼
-          Cleaning      Validation    Transformation
-             │              │              │
-             └──────────────┼──────────────┘
+             ┌───────────────────────────┐
+             ▼                           ▼
+          Cleaning                 Transformation
+             │                           │
+             └───────────────────────────┘
+                            │
                             ▼
                   Fact & Dimension Tables
                             │
@@ -45,7 +46,7 @@ The project is designed to demonstrate practical skills in:
                          MySQL
                             │
                     ┌───────┴───────┐
-                    │
+                    │               │
                     │               ▼
                     ▼            PK / FK         
                SQL Analysis     Relationships       
@@ -55,15 +56,65 @@ The project is designed to demonstrate practical skills in:
                                 Power BI
                                     │
                                     ▼
-                              DAX Measures
-                                    │
-                                    ▼
                             Interactive Dashboard
              
 ```
 
+## How to Run
+
+1. 
+```bash
+      pip install -r requirements.txt
+```
+
+2.   Create a '.env' file in the project root:
+
+   - DB_USER=your_mysql_username
+   - DB_PASSWORD=your_mysql_password
+   - DB_HOST=localhost
+   - DB_NAME=chemical_production
+
+   The pipeline uses environment variables for the database connection. Your code loads these values using load_dotenv().
+
+
+3.  Place your production CSV files inside:
+```
+   Raw/
+   ├── production_june.csv
+   ├── production_july.csv
+   └── production_august.csv
+```
+4. Run the pipeline
+```
+    python etl_modelling_pipeline.py  
+```
+
+5. View the results
+
+   After execution:
+
+   output/
+      Dimension CSV files
+
+   Analysis/
+      SQL analysis results
+
+   logs/
+      pipeline.log
+
+6. Power BI Setup
+
+   The project includes a Power BI `.pbix` dashboard containing the
+   completed visualizations, slicers, and DAX measures.
+
+   1. Open the `.pbix` file in Power BI Desktop.
+   2. If using a different MySQL environment, update the MySQL Server
+      and Database connection.
+   3. Enter the required MySQL credentials if prompted.
+   4. Click **Refresh** to load the latest data from MySQL.
+
 ##  Project Architecture
-text
+
 ```
 Chemical Production Data Automation
 │
@@ -90,11 +141,15 @@ Chemical Production Data Automation
 ├── logs/
 │   └── pipeline.log
 │
-├── Images/
+├── PowerBI/
+│   └── Chemical_Production_Dashboard.pbix
+│
+├── Screenshots/
 │   └── Dashboard.png
 │
+├── .env.example
 ├── LICENSE
-├── Pipeline.py
+├── etl_modelling_pipeline.py
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -161,15 +216,15 @@ This creates a basic star-schema structure for analytical reporting.
 
 ## SQL Analysis
 
-Analysis 1 — Production by Plant
+- Analysis 1 — Production by Plant
 
-Analysis 2 — Good vs Rejected Production
+- Analysis 2 — Good vs Rejected Production
 
-Analysis 3 — Production by Machine
+- Analysis 3 — Production by Machine
 
-Analysis 4 — Production by Product  
+- Analysis 4 — Production by Product  
 
-Analysis 5 — Production by Operator
+- Analysis 5 — Production by Operator
 
 
 ## Power BI Dashboard
@@ -277,7 +332,18 @@ Power BI
 DAX
    ↓
 Interactive Dashboard
+
 ```
+
+## Loading Strategy
+
+This version of the pipeline uses a Full Refresh loading strategy.
+
+During each pipeline execution, the existing MySQL tables are removed
+and the transformed data is loaded again from the source CSV files.
+
+Future versions may implement incremental loading and other advanced
+ETL techniques.
 
 ## Author
 
