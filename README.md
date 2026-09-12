@@ -263,9 +263,6 @@ Logs are stored in:
 
 logs/pipeline.log
 
-
-## Technologies Used
-
 ## Technologies Used
 
 | Technology | Purpose |
